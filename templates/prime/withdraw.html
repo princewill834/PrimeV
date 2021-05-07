@@ -1,0 +1,35 @@
+{%extends 'prime/base.html'%}
+{% load static%}
+{%block title%}create-an-account-with-us{%endblock%}
+
+{%block content%}
+{%load crispy_forms_tags%}
+<div class="container">
+    
+    <div class="col-reg mt-4 mb-2">
+        <div class="register_wrapper mt-3">
+            <div class="content">
+                <img height="91px" width="90px" src="{% static 'img/flawa.jpg'%}">
+            <h3 style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color:rgb(10, 13, 185) ">Withdraw your money by filling your correct details</h3>
+        
+            
+            </div>
+            
+            <form method="POST">{%csrf_token%}
+                 
+                <div class="ml-3 mr-4 mt-4">
+                {{form|crispy}}
+                 </div>
+                
+                <div class="content">
+                    <button type="submit" class="btn btn-signup">Proceed</button>
+                 </div>
+            </form>
+            
+        
+
+        </div>
+
+    </div>
+</div>
+{%endblock%}

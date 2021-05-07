@@ -1,0 +1,43 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-paleblue">
+  <a class="navbar-brand" href="">Kcee-Light</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link ml-2" href="{% url 'index'%}">Home</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link ml-2" href="{% url 'coupon'%}">Buy Coupon</a>
+      </li>
+
+        <li class="nav-item active dropdown ">
+          <a class="nav-link dropdown-toggle" href="#" id="dropdown07" 
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
+          <div class="dropdown-menu" aria-labelledby="dropdown07">
+            <a class="dropdown-item" href="#">About</a>
+            <a class="dropdown-item" href="#">Contact us</a>
+            <a class="dropdown-item" href="{% url 'login'%}">Login</a>
+            <a class="dropdown-item" href="{% url 'register'%}">Register</a>
+          </div>
+        </li>
+      
+
+    </ul>
+    
+    
+  </div>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+       {%if user.is_authenticated%}
+        <span id="welcome">Welcome, {{user.fullname}}</span>
+        <a class="nav-link ml-1 " id="welcome" href="{% url 'customer_dashboard'%}">Dashboard</a>
+        <a class="nav-link ml-1 " id="welcome" href="{% url 'logout'%}">Logout</a>
+       {%endif%}
+    </div>
+  </div>
+ 
+</nav>
+

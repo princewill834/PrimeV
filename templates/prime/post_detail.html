@@ -1,0 +1,50 @@
+{%extends 'prime/base.html'%}
+{% load static%}
+{% load social_share%}
+{%block title%}Buy-your-coupon-from-our-vendors{%endblock%}
+
+{%block content%}
+
+
+<div class="container">
+    
+    <div class="content">
+       <p class="mt-2" style=" color: #766f99;"> {{post.date}} </p> 
+    <h2  class="mt-4"style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">Sponsored Post For Today  </h2>
+    <p style="color: rgb(6, 28, 116) ;;">you can share any of our post on your whatsapp page </p>
+    
+    </div>
+</div>
+    
+    <div class="col-md-12">
+        
+        <div class="post_content ">
+            {{post.content|safe}}
+        </div>
+              
+    </div>
+   
+    
+      {%if user.is_authenticated%}
+      <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//127.0.0.1%3A8000/post-detail/{{post.slug}}/">share post</a>
+      
+      <!-- <button type="button" class="ml-4 mb-4 btn btn-success share-item" data-toggle="modal" data-target="#exampleModalLong">SHARE</button> -->
+
+      {%endif%}
+
+{%endblock%}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

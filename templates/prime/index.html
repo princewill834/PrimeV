@@ -1,0 +1,86 @@
+{%extends 'prime/base.html'%}
+{% load static%}
+{%block title%}KceeLight-for-business{%endblock%}
+
+{%block content%}
+
+<div class="container">
+           <br>
+            <div class="col-md-12">
+                <div class="blog_content1">
+                    <div class="content">
+                        
+                        <h2 class="mt-4" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">Welcome To Kaycee-Lite</h2>
+                        <img height="91px" width="90px" src="{% static 'img/flawa.jpg'%}">
+                        <p class="mt-4">We provide business services to our customers daily, by sharing our business post to earn daily income.</p>
+                        <hr class="ml-2 mr-4">
+                        <a class="btn btn-color"href="{% url 'register'%}">Get Started</a>
+                        <a class="btn btn-secondary" href="{% url 'login'%}">Login</a>
+                    </div>
+                    
+                </div>
+
+                <img class="mt-4" width="100%" style="border: none;" height="350" src="{% static 'img/businessgroup.jpg' %}">
+
+
+                <div class="content">
+                    <h2 class="mt-4" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">Our Services</h2>
+                </div>
+
+                <div class="blog_item_img mt-4">
+                    <img width="100%" height="350px" class="card-img rounded-0" src="{% static 'img/financial.jpg' %}" alt=""> 
+                </div>
+                <div class="blog_content mt-4">
+                    <div class="content">
+                    <h3>Adverts For business</h3>
+                    <p>We are here to help you advertise your business, all we simply do is to place your business adverts on our platform</p>                    
+                    </div>
+                </div>
+
+                <div class="blog_content mt-4">
+                    <div class="content">
+                    <h3>Crypto Trading</h3>
+                    <p>Our platform also provide crypto currency trading, we ensure that you are linked to the right blockchain so as to make 
+                        more profit as you invest your money. your money growth and security is our concern.
+                    </p>                    
+                    </div>
+                </div>
+                <div class="blog_content mt-4">
+                    <div class="content">
+                    <h3>24/7 Customer Service</h3>
+                    <p>Dont worry about our service: we are always available to support you</p>                    
+                    </div>
+                </div>
+
+            </div>         
+</div>
+
+<div>             
+    <img class="mt-4" width="100%" height="400px" src="{% static 'img/stock.jpg' %}">
+</div>
+
+<div class="mt-2 mb-3 content">
+    <h2>How to use our service ( for new users only)</h2>
+</div>
+<div class="lastsection">
+    <ul>
+        <li>Get a coupon code from our trusted vendors</li>
+        <li>Register with your coupon code</li>
+        <li>Login and share sponsored post to earn</li>
+        <li>Refer friends and family to earn</li>
+        <li>withdraw total revenue from your wallet to local Bank Account </li>
+    </ul>
+</div>
+
+<footer class="footer-section">
+    <div class="container">
+        <h2>Kaycee-Lite</h2>
+      <div class="copyright">
+        <span class="text-muted">Copyright &copy; Kceeworks 2021 | All rights reserved</span>
+      </div>
+    </div>
+</footer>
+
+{%endblock%}
+
+

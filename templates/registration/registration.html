@@ -1,0 +1,41 @@
+{%extends 'prime/base.html'%}
+{% load static%}
+{%block title%}create-an-account-with-us{%endblock%}
+
+{%block content%}
+{%load crispy_forms_tags%}
+<div class="container">
+    
+    <div class="col-reg mt-4 mb-2">
+        <div class="register_wrapper mt-3">
+            <div class="content">
+                <img height="91px" width="90px" src="{% static 'img/flawa.jpg'%}">
+            <h2 style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color:rgb(10, 13, 185) ">Welcome to kcee-light</h2>
+            <h4 style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color:rgb(9, 11, 148)">Create a new account here with us</h4>
+            
+        
+            
+            </div>
+            
+            <form method="POST">{%csrf_token%}
+                 
+                <div class="ml-3 mr-4 mt-4">
+                {{form|crispy}}
+                 </div>
+                
+                <div class="content">
+                    <button type="submit" class="btn btn-signup"> SIGN UP</button>
+                 </div>
+            </form>
+            <div class="mt-2 ml-3">
+                <small class="text-muted">
+                    Already have an account?<a class="ml-2" href="{% url 'login'%}">Sign In</a>
+                </small>
+            </div>
+        
+
+        </div>
+
+    </div>
+</div>
+{%endblock%}

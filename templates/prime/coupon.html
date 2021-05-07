@@ -1,0 +1,26 @@
+{%extends 'prime/base.html'%}
+{% load static%}
+{%block title%}Buy-your-coupon-from-our-vendors{%endblock%}
+
+{%block content%}
+
+<div class="container">
+    <div class="content">
+    <h2  class="mt-4"style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">Buy your Coupon</h2>
+    <p>contact any of our listed vendor via whatsapp and purchase your coupon code</p>
+    </div>
+    <br>
+    
+    <div class="col-md-12">
+        {%for vendor in vendors%}
+        <div class="blog_content mt-4 mb-2">
+            <div class="content">
+            <h3>{{vendor.fullname}}</h3>
+            <hr class="mr-2">
+            <a href="https://api.whatsapp.com/send?phone={{vendor.phone}}&text=I%20need%20a%20coupon%20code">Whatsapp this vendor</a>                    
+            </div>
+        </div>
+        {%endfor%}
+    </div>
+</div>
+{%endblock%}
